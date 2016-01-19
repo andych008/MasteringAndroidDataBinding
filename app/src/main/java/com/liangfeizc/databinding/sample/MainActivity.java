@@ -13,6 +13,7 @@ import com.liangfeizc.databinding.sample.converter.ConversionsActivity;
 import com.liangfeizc.databinding.sample.custombinding.CustomBindingActivity;
 import com.liangfeizc.databinding.sample.dynamic.DynamicActivity;
 import com.liangfeizc.databinding.sample.include.IncludeActivity;
+import com.liangfeizc.databinding.sample.normal.NormalActivity;
 import com.liangfeizc.databinding.sample.observable.ObservableActivity;
 import com.liangfeizc.databinding.sample.resource.ResourceActivity;
 import com.liangfeizc.databinding.sample.viewid.ViewWithIDsActivity;
@@ -25,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    public void openNormal(View view) {
+        startActivity(new Intent(this, NormalActivity.class));
+    }
+
 
     public void openBasic(View view) {
         startActivity(new Intent(this, BasicActivity.class));
