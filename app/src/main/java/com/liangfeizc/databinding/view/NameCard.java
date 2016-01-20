@@ -19,6 +19,8 @@ public class NameCard extends LinearLayout {
 
     private TextView mFirstName;
     private TextView mLastName;
+    private TextView tvAge;
+    private TextView tvWeight;
 
     public NameCard(Context context) {
         this(context, null);
@@ -46,6 +48,9 @@ public class NameCard extends LinearLayout {
         inflate(getContext(), R.layout.name_card, this);
         mFirstName = (TextView) findViewById(R.id.first_name);
         mLastName = (TextView) findViewById(R.id.last_name);
+        tvAge = (TextView) findViewById(R.id.age);
+        tvWeight = (TextView) findViewById(R.id.weight);
+        setAge(mAge);
     }
 
     public void setFirstName(@NonNull final String firstName) {
@@ -57,6 +62,10 @@ public class NameCard extends LinearLayout {
     }
 
     public void setAge(@IntRange(from=1) int age) {
-        mAge = age;
+        tvAge.setText(String.valueOf(age));
+    }
+
+    public void setWeight(@IntRange(from=1) int weight) {
+        tvWeight.setText(String.valueOf(weight));
     }
 }
