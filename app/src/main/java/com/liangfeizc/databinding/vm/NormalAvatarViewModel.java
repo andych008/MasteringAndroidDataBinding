@@ -1,4 +1,4 @@
-package com.liangfeizc.databinding.model;
+package com.liangfeizc.databinding.vm;
 
 import android.content.Context;
 import android.databinding.BaseObservable;

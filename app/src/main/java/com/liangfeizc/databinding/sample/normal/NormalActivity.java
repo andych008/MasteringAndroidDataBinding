@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.liangfeizc.databinding.R;
 import com.liangfeizc.databinding.databinding.ActivityNormalBinding;
-import com.liangfeizc.databinding.model.NormalViewModel;
+import com.liangfeizc.databinding.vm.NormalViewModel;
 import com.liangfeizc.databinding.sample.BaseActivity;
 
 public class NormalActivity extends BaseActivity {
