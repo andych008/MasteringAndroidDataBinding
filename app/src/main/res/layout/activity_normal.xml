@@ -2,16 +2,11 @@
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
-        <import type="com.liangfeizc.databinding.sample.normal.NormalActivity"/>
-
-        <variable
-            name="activity"
-            type="NormalActivity"/>
+        <import type="com.liangfeizc.databinding.model.NormalViewModel"/>
 
         <variable
-            name="imageUrl"
-            type="String"/>
+            name="model"
+            type="NormalViewModel"/>
     </data>
 
     <LinearLayout
@@ -19,6 +14,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@string/createCard"
+            android:onClick="@{model.btnClickListener}"/>
         <com.liangfeizc.databinding.view.NameCard
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -27,17 +27,17 @@
             android:layout_marginRight="@dimen/largePadding"
             android:layout_marginStart="@dimen/largePadding"
             android:gravity="center"
-            app:weight="@{@integer/weight}"
-            app:age="27"
-            app:firstName="@{@string/firstName}"
-            app:lastName="@{@string/lastName}"/>
+            app:age="@{model.card.age, default=10}"
+            app:firstName="@{model.card.firstName ?? `姓`}"
+            app:lastName="@{model.card.lastName ?? @string/lastNameTip}"/>
 
         <com.liangfeizc.avatarview.AvatarView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
             app:error="@{@drawable/error}"
-            app:imageUrl="@{imageUrl}"
-            app:onClickListener="@{activity.avatarClickListener}"/>
+            app:imageUrl="@{model.avatar.imageUrl}"
+            app:onClickListener="@{model.avatar.avatarClickListener}"/>
 
     </LinearLayout>
 </layout>

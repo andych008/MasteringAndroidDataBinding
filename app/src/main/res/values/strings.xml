@@ -40,6 +40,8 @@
 
     <string name="firstName">Liang</string>
     <string name="lastName">Fei</string>
+    <string name="lastNameTip">名</string>
+    <string name="createCard">生成名片与图片</string>
     <string name="title_activity_conversions">ConversionsActivity</string>
     <string name="title_activity_normal">一般用法</string>
 

@@ -23,6 +23,7 @@ public class Randoms {
 
     public static final String[] FIRST_NAMES = {"Zhao", "Qian", "Sun", "Li", "Zhou", "Wu"};
     public static final String[] LAST_NAMES = {"Tiedan", "Ritian", "LiangChen"};
+    public static final int[] AGES = {15, 23, 29, 32};
 
     private static final Random sRandomGenerator = new Random();
 
@@ -32,5 +33,9 @@ public class Randoms {
 
     public static String nextLastName() {
         return LAST_NAMES[sRandomGenerator.nextInt(LAST_NAMES.length)];
+    }
+
+    public static int nextAge() {
+        return AGES[sRandomGenerator.nextInt(AGES.length)];
     }
 }
